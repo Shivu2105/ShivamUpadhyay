@@ -211,10 +211,87 @@ section{
   }
 }
 
+/* About section*/
+
+.about-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  
+  .right-about{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    
+    .about-item{
+      border: 1px solid var(--color-grey-5);
+      border-radius: 10px;
+      transition: all .4s ease-in-out;
+      box-shadow: 1px 2px 15px rgba(0, 0, 0, .1);
+      &:hover{
+        cursor: default;
+        transform: translateY(-5px);
+        border: 1px solid var(--color-secondary);
+        box-shadow: 1px 4px 15px rgba(0, 0, 0, .32);
+      }
+      .abt-text{
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        .large-text{
+          font-size: 2rem;
+          font-weight: 700;
+          color: var(--color-secondary);
+        }
+        .small-text{
+          padding-left: 3rem;
+          position: relative;
+          text-transform: uppercase;
+          font-size: 1rem;
+          color: var(--color-grey-1);
+          letter-spacing: 2px;
+          &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 15px;
+            height: 2px;
+            background-color: var(--color-grey-5);
+
+            .btn-cert{
+              margin: auto;
+              padding: 5px;
+              color: inherit;
+            }
+          }
+          
+        }
+      }
+    }
+  }
+
+  .left-about{
+    padding-right: 5rem;
+    p{
+      line-height: 2rem;
+      padding: 1rem;
+      color: var(--color-grey-1);
+      h4{
+        font-size: 2rem;
+        text-transform: uppercase; 
+      }
+    }
+  }
+}
+
+
+//Independent components
 .btn-container{
   display: flex;
   align-self: flex-start;
 }
+
 .main-btn{
   border-radius: 30px;
   color: inherit;
@@ -223,14 +300,14 @@ section{
   border: 1px solid var(--color-secondary);
   display: flex;
   align-self: flex-start;
-  
+  display: flex;
   align-items: center;
   overflow: hidden;
   .btn-text{
       padding: 0 2rem;
   }
   .btn-icon{
-      color: var(--color-secondary);
+      // color: var(--color-secondary);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -252,7 +329,32 @@ section{
           height: 100%;
           background-color: var(--color-secondary);
           transform: translateX(0);
+          transition: all .4s ease-in-out;
        }
+  }
+}
+
+.main-title{
+  text-align: center;
+  h2{
+    position: relative;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 600;
+    .me{
+      color: var(--color-secondary);
+    }
+    .bg-text{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      color: var(--color-grey-5);
+      transition: all .4s ease-in-out;
+      z-index: -1;
+      transform: translate(-50%,-50%);
+      font-weight: 800;
+      font-size: 5.1rem;
+    }
   }
 }
 //https://github.com/sh654/Personal-Portfolio.git git repo
