@@ -211,6 +211,69 @@ section{
   }
 }
 
+/* about-skills section */ 
+.skill-title{
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 3rem;
+}
+
+.about-stats{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+
+  .left-side{
+    .developer{
+      width: 35vw;
+      height: 100%;
+      padding-right: 10rem;
+    }
+  }
+
+  .right-side{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2rem;
+    padding-left: -4rem;
+    // padding-right: 5rem;
+    .skill{
+      border: 1px solid var(--color-grey-5);
+      border-radius: 10px;
+      transition: all .4s ease-in-out;
+      box-shadow: 1px 2px 15px rgba(0, 0, 0, .1);
+      
+      &:hover{
+        cursor: default;
+        transform: translateY(-5px);
+        border: 1px solid var(--color-secondary);
+        box-shadow: 1px 4px 15px rgba(0, 0, 0, .32);
+      }
+      .skill-align{
+        padding: 10px; /*.fa-html5 .fa-css3-alt .fa-square-js .fa-react .fa-node-js .fa-github*/
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+  
+      }
+      .py{
+        width: 50%;
+        height: 85%;
+      }
+      .fa-brands{
+        
+        font-size: 40px;
+      }
+      
+      .html5{
+        font-size: 20px;
+      }
+    }
+  }
+  
+}
+
 /* About section*/
 
 .about-container{
@@ -223,6 +286,7 @@ section{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
+    
     
     .about-item{
       border: 1px solid var(--color-grey-5);
@@ -259,10 +323,10 @@ section{
             height: 2px;
             background-color: var(--color-grey-5);
 
-            .btn-cert{
-              margin: auto;
-              padding: 5px;
-              color: inherit;
+            .fab fa-github{
+              margin: 5px;
+              padding: 10px;
+              width: 20px;
             }
           }
           
@@ -273,13 +337,13 @@ section{
 
   .left-about{
     padding-right: 5rem;
-    p{
-      line-height: 2rem;
-      padding: 1rem;
-      color: var(--color-grey-1);
-      h4{
-        font-size: 2rem;
-        text-transform: uppercase; 
+    h4{
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      p{
+        line-height: 2rem;
+        padding: 1rem;
+        color: var(--color-grey-1);
       }
     }
   }
@@ -342,7 +406,8 @@ section{
     font-size: 3rem;
     font-weight: 600;
     .me{
-      color: var(--color-secondary);
+      color: transparent;
+      -webkit-text-stroke: 2px var(--color-secondary);
     }
     .bg-text{
       position: absolute;
@@ -355,6 +420,28 @@ section{
       font-weight: 800;
       font-size: 5.1rem;
     }
+  }
+}
+
+
+
+
+//btn for about container
+
+
+.main-btn1{
+  margin: 50%;
+  border-radius: 30px;
+  color: transparent;
+  
+  border: 1px solid var(--color-grey-3);
+  display: flex;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  
+  .btn-text{
+      padding: 0 2rem;
   }
 }
 //https://github.com/sh654/Personal-Portfolio.git git repo

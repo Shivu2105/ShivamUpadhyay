@@ -189,6 +189,127 @@ section {
   color: var(--color-secondary);
 }
 
+/* about-skills section */
+.skill-title {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 3rem;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+.about-stats .left-side .developer {
+  width: 35vw;
+  height: 100%;
+  padding-right: 10rem;
+}
+.about-stats .right-side {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  padding-left: -4rem;
+}
+.about-stats .right-side .skill {
+  border: 1px solid var(--color-grey-5);
+  border-radius: 10px;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+}
+.about-stats .right-side .skill:hover {
+  cursor: default;
+  transform: translateY(-5px);
+  border: 1px solid var(--color-secondary);
+  box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
+}
+.about-stats .right-side .skill .skill-align {
+  padding: 10px; /*.fa-html5 .fa-css3-alt .fa-square-js .fa-react .fa-node-js .fa-github*/
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+.about-stats .right-side .skill .py {
+  width: 50%;
+  height: 85%;
+}
+.about-stats .right-side .skill .fa-brands {
+  font-size: 40px;
+}
+.about-stats .right-side .skill .html5 {
+  font-size: 20px;
+}
+
+/* About section*/
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+.about-container .right-about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+.about-container .right-about .about-item {
+  border: 1px solid var(--color-grey-5);
+  border-radius: 10px;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+}
+.about-container .right-about .about-item:hover {
+  cursor: default;
+  transform: translateY(-5px);
+  border: 1px solid var(--color-secondary);
+  box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
+}
+.about-container .right-about .about-item .abt-text {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.about-container .right-about .about-item .abt-text .large-text {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+.about-container .right-about .about-item .abt-text .small-text {
+  padding-left: 3rem;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: var(--color-grey-1);
+  letter-spacing: 2px;
+}
+.about-container .right-about .about-item .abt-text .small-text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 15px;
+  height: 2px;
+  background-color: var(--color-grey-5);
+}
+.about-container .right-about .about-item .abt-text .small-text::before .fab fa-github {
+  margin: 5px;
+  padding: 10px;
+  width: 20px;
+}
+.about-container .left-about {
+  padding-right: 5rem;
+}
+.about-container .left-about h4 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.about-container .left-about h4 p {
+  line-height: 2rem;
+  padding: 1rem;
+  color: var(--color-grey-1);
+}
+
 .btn-container {
   display: flex;
   align-self: flex-start;
@@ -202,6 +323,7 @@ section {
   border: 1px solid var(--color-secondary);
   display: flex;
   align-self: flex-start;
+  display: flex;
   align-items: center;
   overflow: hidden;
 }
@@ -209,7 +331,6 @@ section {
   padding: 0 2rem;
 }
 .main-btn .btn-icon {
-  color: var(--color-secondary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -230,4 +351,44 @@ section {
   height: 100%;
   background-color: var(--color-secondary);
   transform: translateX(0);
+  transition: all 0.4s ease-in-out;
+}
+
+.main-title {
+  text-align: center;
+}
+.main-title h2 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 600;
+}
+.main-title h2 .me {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--color-secondary);
+}
+.main-title h2 .bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: var(--color-grey-5);
+  transition: all 0.4s ease-in-out;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  font-weight: 800;
+  font-size: 5.1rem;
+}
+
+.main-btn1 {
+  margin: 50%;
+  border-radius: 30px;
+  color: transparent;
+  border: 1px solid var(--color-grey-3);
+  display: flex;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+}
+.main-btn1 .btn-text {
+  padding: 0 2rem;
 }/*# sourceMappingURL=styles.css.map */
