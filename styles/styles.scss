@@ -1,3 +1,5 @@
+
+
 * {
   margin: 0;
   padding: 0;
@@ -56,9 +58,13 @@ a {
 }
 
 header {
-  height: 100vh;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
   color: var(--color-white);
   overflow: hidden;
+  @media screen and (max-width:600px){
+    min-height: 100vh;
+  }
 }
 
 section {
@@ -295,10 +301,8 @@ section {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 1rem;
       }
-      .py {
-        width: 50%;
-        height: 85%;
-      }
+      
+      
       .fa-brands {
         font-size: 40px;
       }
@@ -718,4 +722,7 @@ section {
     padding: 0 2rem;
   }
 }
+
+
+@import './media';
 //https://github.com/sh654/Personal-Portfolio.git git repo
