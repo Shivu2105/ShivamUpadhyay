@@ -33,7 +33,7 @@
   --color-white: #454e56;
   --color-black: #000;
   --color-grey0: #f8f8f8;
-  --color-grey-1: #dbe1e8;
+  --color-grey-1: #545555d4;
   --color-grey-2: #6c7983;
   --color-grey-3: #6c7983;
   --color-grey-4: #454e56;
@@ -202,7 +202,7 @@ section {
     2,
     1fr
   ); //use to make left and right header differnet
-  height: 100%;
+  min-height: 100%;
   .left-header {
     display: flex;
     align-items: center;
@@ -290,7 +290,7 @@ section {
       box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
 
       &:hover {
-        cursor: default;
+        cursor: pointer;
         transform: translateY(-5px);
         border: 1px solid var(--color-secondary);
         box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
@@ -362,12 +362,14 @@ section {
             height: 2px;
             background-color: var(--color-grey-5);
 
-            .fab fa-github {
-              margin: 5px;
-              padding: 10px;
-              width: 20px;
-            }
+           
           }
+        }
+        i{
+          font-size: 1.5rem;
+          margin: 5px;
+          padding: 10px;
+          width: 20px;
         }
       }
     }
@@ -375,14 +377,16 @@ section {
 
   .left-about {
     padding-right: 5rem;
-    h4 {
+    .info-text{
       font-size: 1.5rem;
       text-transform: uppercase;
-      p {
-        line-height: 2rem;
-        padding: 1rem;
-        color: var(--color-grey-1);
-      }
+      margin: 1rem;
+    }
+    .p-info{
+      line-height: 2rem;
+      padding: 1rem;
+      color: var(--color-grey-1);
+      margin-bottom: 0.7rem;
     }
   }
 }
@@ -523,8 +527,14 @@ section {
 
 
 
-  .bottom-sect{
-    text-align: center;
+  .bottom-hed{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 2rem;
+    align-items: center;
+    .h3{
+      margin: 1rem;
+    }
     color: var(--color-secondary);
     margin-top: 3rem;
 }
@@ -536,7 +546,7 @@ section {
   .left-contact{
     flex: 2;
     h4{
-      margin-top: 1rem;
+      margin-top: -1rem;
       font-size: 2rem;
       text-transform: uppercase;
     }
