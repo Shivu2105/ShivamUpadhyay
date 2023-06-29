@@ -43,3 +43,40 @@ function PageTransitions(){
 }
 
 PageTransitions();
+
+// function sendMail(){
+//     var params ={
+//         name: document.getElementById('name').value,
+//         email: document.getElementById('email').value,
+//         subject: document.getElementById('subject').value,
+//         message: document.getElementById('message').value,
+//     };
+
+//     const serviceId = "service_qx37xyc";
+//     const templateId = "template_t7obxab";
+
+//     emailjs.send(serviceId, templateId, params).then((res) =>{
+//         document.getElementById("name").value = "";
+//         document.getElementById("email").value = "";
+//         document.getElementById("subject").value = "";
+//         document.getElementById("message").value = "";
+
+//         console.log(res);
+//         alert("your message sent successfully");
+//     })
+//     .catch(err => console.log(err));
+// }
+
+function sendEmail(){
+    Email.send({
+        Host : "smtp.gmail.com",
+        Username : "shivamgamingyt2105@gmail.com",
+        Password : "yseievwkfagetqpq",
+        To : 'shivamgamingyt2105@gmail.com',
+        From : document.getElementById('email').value,
+        Subject : document.getElementById('subject').value,
+        Body : "And this is the body"
+    }).then(
+      message => alert(message)
+    );
+}

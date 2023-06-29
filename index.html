@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7d62e90de2.js" crossorigin="anonymous"></script>
+    
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
 </head>
 <body class="main-content">
     <header class="section sec1 header active" id="home">
@@ -489,25 +492,26 @@
                     </div>
 
                     <div class="right-contact">
-                        <form action="" class="contact-form">
+                        <form onsubmit="sendEmail(); reset(); return false;" class="contact-form">
                             <div class="input-control i-c-2">
-                                <input type="text" required placeholder="Your Name">
-                                <input type="email" required placeholder="Your Email">
+                                <input type="text"  placeholder="Your Name" id="name" class="form-control" required>
+                                <input type="email" placeholder="Your Email" id="email" class="form-control" required>
                             </div>
 
                             <div class="input-control">
-                                <input type="text" required placeholder="Enter Subject">
+                                <input type="text" required placeholder="Enter Subject" id="subject" class="form-control">
                             </div>
 
                             <div class="input-control">
-                                <textarea name="" id="" cols="15" rows="8" required placeholder="Your message here...."></textarea>
+                                <textarea name="" id="" cols="15" rows="8" required placeholder="Your message here...." id="message" class="form-control"></textarea>
                             </div>
 
                             <div class="submit-btn">
-                                <a href="#" class="main-btn">
-                                    <span class="btn-text">Download Resume</span>
-                                    <span class="btn-icon"><i class="fas fa-download"></i></span>
-                                </a>
+                                <button class="main-btn" onclick="sendEmail()" id="btn">                                    
+                                        <span class="btn-text">Submit</span>
+                                        <span class="btn-icon"><i class="fas fa-envelope-square"></i></span>
+                                </button>
+                                     
                             </div>
                         </form>
                     </div>
@@ -537,6 +541,7 @@
     <div class="theme-btn">
         <i class="fas fa-adjust"></i>
     </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
