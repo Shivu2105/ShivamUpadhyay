@@ -67,16 +67,29 @@ PageTransitions();
 //     .catch(err => console.log(err));
 // }
 
-function sendEmail(){
-    Email.send({
-        Host : "smtp.gmail.com",
-        Username : "shivamgamingyt2105@gmail.com",
-        Password : "yseievwkfagetqpq",
-        To : 'shivamgamingyt2105@gmail.com',
-        From : document.getElementById('email').value,
-        Subject : document.getElementById('subject').value,
-        Body : "And this is the body"
-    }).then(
-      message => alert(message)
-    );
-}
+const name = document.getElementById('name');
+const email = document.getElementById('email');
+const subject = document.getElementById('subject');
+const message = document.getElementById('message');
+// const btn = document.getElementById('btn');
+const btn = document.getElementsByClassName('contact-form')[0];
+
+btn.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    console.log("Clicked");
+    // let ebody = `
+    // <h1>First Name: </h1>${fname.value}
+    // <br>
+    // <h1>Last Name: </h1>${lname.value}
+    // `;
+
+    // Email.send({
+    //     SecureToken : "your-token", //add your token here
+    //     To : 'them@website.com', 
+    //     From : "you@isp.com",
+    //     Subject : "This is the subject",
+    //     Body : ebody
+    // }).then(
+    //   message => alert(message)
+    // );
+});
