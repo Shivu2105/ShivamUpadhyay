@@ -106,7 +106,7 @@ button{
 .btn-container {
     display: flex;
     align-self: flex-start;
-    margin-bottom: 3rem;
+    
   }
   
   .main-btn{
@@ -114,6 +114,7 @@ button{
     color: inherit;
     font-weight: 600;
     position: relative;
+    
     // border: 1px solid var(--color-secondary);
     display: flex;
     align-self: flex-start;
@@ -152,6 +153,57 @@ button{
     }
   }
 }
+
+
+.btn-con{
+    display: flex;
+    align-self: flex-start;
+  }
+  
+  .main-btn-con{
+    border-radius: 30px;
+    color: inherit;
+    background-color: var(--color-secondary);
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 4rem;
+    border: 1px solid var(--color-secondary);
+    display: flex;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    .btn-text {
+      padding: 0 2rem;
+    }
+    .btn-icon {
+      // color: var(--color-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      padding: 1rem;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translateX(100%);
+      transition: all 0.4s ease-in-out;
+      z-index: -1;
+    }
+    &:hover {
+      &::before {
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-secondary);
+        transform: translateX(0);
+        transition: all 0.4s ease-in-out;
+      }
+    }
+  }
+
 @media screen and (max-width: 1432px){
     header{
         padding: 0 !important;
