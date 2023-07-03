@@ -213,6 +213,42 @@ button{
     }
     .contact-content-container{
         flex-direction: column;
+        .left-contact{
+            flex: 2;
+            h4{
+              margin-top: -1rem;
+              font-size: 2rem;
+              text-transform: uppercase;
+            }
+            p{
+              margin: 1rem 0;
+              line-height: 1.9rem;
+              // font-size: 0.9rem;
+            }
+        
+            .contact-info{
+              .contact-item{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 1rem;
+                p{
+                  margin: .3rem 0 !important;
+                  padding: 1rem !important;
+                  font-size: 0.5rem;
+                }
+                .icon{
+                  display: grid;
+                  grid-template-columns: 40px 1fr;
+                  i{
+                    display: flex;
+                    align-items: center;
+                    font-size: 1.3rem;
+                  }
+                }
+              }
+            }
+        }
         .right-contact{
             margin-left: 0;
             margin-top: 2.5rem;

@@ -896,6 +896,38 @@ button .main-btn:hover::before {
   .contact-content-container {
     flex-direction: column;
   }
+  .contact-content-container .left-contact {
+    flex: 2;
+  }
+  .contact-content-container .left-contact h4 {
+    margin-top: -1rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+  .contact-content-container .left-contact p {
+    margin: 1rem 0;
+    line-height: 1.9rem;
+  }
+  .contact-content-container .left-contact .contact-info .contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+  }
+  .contact-content-container .left-contact .contact-info .contact-item p {
+    margin: 0.3rem 0 !important;
+    padding: 1rem !important;
+    font-size: 0.5rem;
+  }
+  .contact-content-container .left-contact .contact-info .contact-item .icon {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+  }
+  .contact-content-container .left-contact .contact-info .contact-item .icon i {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+  }
   .contact-content-container .right-contact {
     margin-left: 0;
     margin-top: 2.5rem;
